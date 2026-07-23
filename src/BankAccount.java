@@ -28,7 +28,7 @@ public class BankAccount {
         return this.balance;
     }
     public void display(){
-        System.out.println("Account Number:"+ this.accountHolder);
+        System.out.println("Account Number:"+ this.accountNumber);
         System.out.println("Account Holder Name: "+this.accountHolder);
         System.out.println("Account Balance: $"+this.balance);
     }
@@ -46,7 +46,7 @@ public class BankAccount {
     public void withDraw(double amount){
         System.out.println();
         System.out.println("WITHDRAWING");
-        if(this.balance > amount){
+        if(this.balance > amount && amount > 0){
             this.balance -= amount;
             System.out.println("WithDraw Successfull of Amount: "+amount);
             System.out.println("Balance: $"+this.balance);

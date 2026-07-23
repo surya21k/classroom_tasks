@@ -4,6 +4,6 @@ public class EmployeeProcessor {
         obj.setDesignation("Junior");
         obj.setSalary(50000);
         obj.display();
-        obj.promoteEmployee();
+        obj.promoteEmployee("Senior");
     }
 }

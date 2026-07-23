@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Employee {
     int empId;
     String empName;
@@ -6,13 +8,11 @@ public class Employee {
     int performanceRating;
 
     // parameterized constructor
-    Employee(){
-
-    }
     Employee(int id,String name,int rating){
         this.empId = id;
         this.empName = name;
-        this.performanceRating = rating ;
+        this.performanceRating = rating;
+
     }
     // getters
     public int getEmpId(){
@@ -45,11 +45,13 @@ public class Employee {
         System.out.println("Salary: $"+this.salary);
         System.out.println("Performance Rating: "+this.performanceRating);
     }
-    public void promoteEmployee(){
+    public void promoteEmployee(String design){
+
         if(this.performanceRating >= 4){
             System.out.println();
             System.out.println("After Promotion");
-            System.out.println("New Designation: Senior");
+            this.designation = design;
+            System.out.println("New Designation: "+this.designation);
             this.salary *= 1.2;
             System.out.println("Developer Updated Salary: $"+this.salary);
 
